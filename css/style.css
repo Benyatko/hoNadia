@@ -198,6 +198,106 @@ body{
 		font-weight: 700;
 	}
 }
+/*===============POPUP-REPORT======================================*/
+.popup-report {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: #000000d5;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	opacity: 0;
+	visibility: hidden;
+	overflow-y: auto;
+	overflow-x: hidden;
+	transition: all 0.8s ease 0s;
+}
+.popup-report:target{
+	opacity: 1;
+	visibility: visible;
+}
+.popup-report:target .popup-report__content {
+	transform: perspective(600px) translate(0px, 0%) rotate(0deg);
+	opacity: 1;
+}
+.popup-report__area{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+.popup-report__body {
+	min-height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 30px 10px;
+}
+.popup-report__content {
+	background:url('../img/#Report');
+	color: #fff;
+	max-width: 800px;
+	border-radius: 70px 30px;
+	padding: 30px;
+	position: relative;
+	transition: all 0.8s ease 0s;
+	opacity: 0;
+	transform: perspective(600px) translate(0px, -100%) rotate(45deg);
+}
+.popup-report__close {
+	position: absolute;
+	font-size: 20px;
+	top: 5px;
+	right: 5px;
+	color: #fff;
+	text-decoration: none;
+}
+.popup-report__text {
+	font-size: 14px;
+	letter-spacing: 0.5px;
+}
+.popup-report__text span{
+	font-size: 18px;
+	font-weight: 700;
+}
+@media (max-width: 768px){
+	.popup-report__table {
+		font-size: 12px;
+	}
+	.popup-report__title {
+		font-size: 32px;
+		margin-bottom: 0.5em;
+		font-weight: 700;
+	}
+	.popup-report__text {
+		font-size: 12px;
+		letter-spacing: 0.5px;
+	}
+	.popup-report__text span{
+		font-size: 16px;
+		font-weight: 700;
+	}
+}
+@media (max-width: 430px){
+	.popup-report__table {
+		font-size: 7px;
+	}
+	.popup-report__title {
+		font-size: 22px;
+		margin-bottom: 0.5em;
+		font-weight: 700;
+	}
+	.popup-report__text {
+		font-size: 10px;
+		letter-spacing: 0.5px;
+	}
+	.popup-report__text span{
+		font-size: 12px;
+		font-weight: 700;
+	}
+}
 /*============HEADER-BLOCK=============================================*/
 .header-block {
 	padding: 40px 0px 50px 0px;
@@ -1415,3 +1515,4 @@ justify-content: center;
 		text-align: left;
 	}
 }
+
