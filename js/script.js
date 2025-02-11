@@ -28,7 +28,7 @@ $(document).ready(function(){
 		adaptiveHeight:true,
 		dots: true,
 		infinite: true,
-		autoplaySpeed:500,
+		autoplaySpeed:2000,
 		speed: 300,
 		slidesToShow: 7,
 		slidesToScroll: 4,
@@ -45,11 +45,13 @@ $(document).ready(function(){
 			 settings: {
 				slidesToShow: 6,
 				slidesToScroll: 3,
+				autoplaySpeed:500,
 			 }
 		  },
 		  {
 			 breakpoint: 480,
 			 settings: {
+				autoplaySpeed:500,
 				slidesToShow: 7,
 				slidesToScroll: 1,
 				centerMode:true,
