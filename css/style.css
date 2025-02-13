@@ -199,6 +199,9 @@ body{
 	}
 }
 /*===============POPUP-REPORT======================================*/
+.table {
+	border: 2px solid #f37d28;
+}
 .popup-report {
 	position: fixed;
 	width: 100%;
